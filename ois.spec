@@ -18,7 +18,7 @@ License: zlib/libpng
 Group: System/Libraries
 Url: http://www.wreckedgames.com/wiki/index.php/WreckedLibs:OIS
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: autoconf automake
+BuildRequires: autoconf automake libtool
 BuildRequires: libx11-devel libxaw-devel
 
 %description
