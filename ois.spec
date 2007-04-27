@@ -71,6 +71,6 @@ rm -rf %{buildroot}
 
 %files -n %{lib_name}-devel
 %defattr(-,root,root)
-/usr/include/OIS
+%{_includedir}/OIS
 %{_libdir}/libOIS.*
 %{_libdir}/pkgconfig/OIS.pc
