@@ -17,7 +17,6 @@ Source0: %{distname}.tar.bz2
 License: zlib/libpng
 Group: System/Libraries
 Url: http://www.wreckedgames.com/wiki/index.php/WreckedLibs:OIS
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: autoconf automake libtool
 BuildRequires: libx11-devel libxaw-devel
 
