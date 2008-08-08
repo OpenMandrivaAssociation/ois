@@ -5,7 +5,7 @@
 Summary:	Object Oriented Input System
 Name:		ois
 Version:	1.2.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 
 License:	zlib
 Group:		System/Libraries
