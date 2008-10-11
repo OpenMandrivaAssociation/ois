@@ -5,11 +5,10 @@
 Summary:	Object Oriented Input System
 Name:		ois
 Version:	1.2.0
-Release:	%mkrel 2
-
+Release:	%mkrel 3
 License:	zlib
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/wgois/
+URL:		http://sourceforge.net/projects/wgois/
 Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{version}.tar.gz
 BuildRequires:	libxaw-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -35,6 +34,7 @@ Summary:	Development tools for programs using %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname OIS 1 -d}
 
 %description -n	%{develname}
 This package contains the header files and libraries needed for
