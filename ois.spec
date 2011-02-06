@@ -1,15 +1,17 @@
 %define major 1
+%define filever %(echo v%{version}| tr . -)
 %define libname %mklibname OIS %{major}
 %define develname %mklibname OIS -d
 
 Summary:	Object Oriented Input System
 Name:		ois
-Version:	1.2.0
-Release:	%mkrel 5
+Version:	1.3
+Release:	%mkrel 1
 License:	zlib
 Group:		System/Libraries
 URL:		http://sourceforge.net/projects/wgois/
-Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{filever}.tar.gz
+BuildRequires:	libx11-devel
 BuildRequires:	libxaw-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -41,11 +43,10 @@ This package contains the header files and libraries needed for
 developing programs using the %{name} library.
 
 %prep
-%setup -qn %{name}
-
+%setup -qn %{name}-%{filever}
 
 %build
-./bootstrap
+sh ./bootstrap
 %configure2_5x
 %make
 
