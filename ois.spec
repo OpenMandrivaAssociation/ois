@@ -12,6 +12,7 @@ Group:		System/Libraries
 URL:		http://sourceforge.net/projects/wgois/
 Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{filever}.tar.gz
 Patch0:		ois-gcc47.patch
+Patch1:		ois-automake-1.13.patch
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
 
@@ -44,6 +45,7 @@ developing programs using the %{name} library.
 %prep
 %setup -qn %{name}-%{filever}
 %patch0 -p0
+%patch1 -p1 -b .am113~
 
 %build
 sh ./bootstrap
@@ -58,7 +60,7 @@ sh ./bootstrap
 %{_libdir}/lib*%{major}*.so
 
 %files -n %{develname}
-%{_includedir}/OIS
+%{_includedir}/ois
 %{_libdir}/libOIS.so
 %{_libdir}/libOIS.a
 %{_libdir}/pkgconfig/OIS.pc
