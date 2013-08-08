@@ -6,10 +6,10 @@
 Summary:	Object Oriented Input System
 Name:		ois
 Version:	1.3
-Release:	3
+Release:	4
 License:	zlib
 Group:		System/Libraries
-URL:		http://sourceforge.net/projects/wgois/
+Url:		http://sourceforge.net/projects/wgois/
 Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{filever}.tar.gz
 Patch0:		ois-gcc47.patch
 Patch1:		ois-automake-1.13.patch
@@ -50,7 +50,7 @@ developing programs using the %{name} library.
 
 %build
 sh ./bootstrap
-%configure2_5x
+%configure2_5x --disable-static
 %make
 
 %install
@@ -58,11 +58,10 @@ sh ./bootstrap
 
 %files -n %{libname}
 %doc ReadMe.txt
-%{_libdir}/lib*%{major}*.so
+%{_libdir}/libOIS-%{major}*.so
 
 %files -n %{develname}
 %{_includedir}/ois
 %{_libdir}/libOIS.so
-%{_libdir}/libOIS.a
 %{_libdir}/pkgconfig/OIS.pc
 
