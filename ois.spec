@@ -49,8 +49,9 @@ developing programs using the %{name} library.
 %patch1 -p1 -b .am113~
 
 %build
+touch NEWS README AUTHORS ChangeLog
 sh ./bootstrap
-%configure2_5x --disable-static
+%configure --disable-static
 %make
 
 %install
