@@ -1,4 +1,4 @@
-%define major 1.3.0
+%define major %{version}
 %define filever %(echo v%{version}| tr . -)
 %define libname %mklibname OIS %{major}
 %define develname %mklibname OIS -d
