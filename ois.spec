@@ -55,7 +55,7 @@ developing programs using the %{name} library.
 %make_install -C build
 
 %files -n %{libname}
-%{_libdir}/libOIS%{major}*.so
+%{_libdir}/libOIS.so.%{major}*
 
 %files -n %{develname}
 %{_includedir}/ois
