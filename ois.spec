@@ -7,7 +7,7 @@
 
 Summary:	Object Oriented Input System
 Name:		ois
-Version:	1.5
+Version:	1.5.1
 Release:	1
 License:	zlib
 Group:		System/Libraries
