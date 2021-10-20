@@ -1,18 +1,20 @@
-%define major 1.3.0
+%define major %{version}
 %define filever %(echo v%{version}| tr . -)
 %define libname %mklibname OIS %{major}
 %define develname %mklibname OIS -d
 
+%define oname OIS
+
 Summary:	Object Oriented Input System
 Name:		ois
-Version:	1.3
-Release:	14
+Version:	1.5.1
+Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://sourceforge.net/projects/wgois/
-Source0:	http://downloads.sourceforge.net/wgois/%{name}_%{filever}.tar.gz
-Patch0:		ois-gcc47.patch
-Patch1:		ois-automake-1.13.patch
+Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+#Patch0:		ois-gcc47.patch
+#Patch1:		ois-automake-1.13.patch
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
 
@@ -44,21 +46,17 @@ This package contains the header files and libraries needed for
 developing programs using the %{name} library.
 
 %prep
-%setup -qn %{name}-%{filever}
-%patch0 -p0
-%patch1 -p1 -b .am113~
+%setup -qn %{oname}-%{version}
+%autopatch -p1
 
 %build
-touch NEWS README AUTHORS ChangeLog
-sh ./bootstrap
-%configure --disable-static
-%make
+%cmake
+%make_build
 
 %install
-%makeinstall_std
+%make_install -C build
 
 %files -n %{libname}
-%doc ReadMe.txt
 %{_libdir}/libOIS-%{major}*.so
 
 %files -n %{develname}
