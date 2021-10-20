@@ -12,7 +12,7 @@ Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		http://sourceforge.net/projects/wgois/
-Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 #Patch0:		ois-gcc47.patch
 #Patch1:		ois-automake-1.13.patch
 BuildRequires:	pkgconfig(x11)
@@ -46,7 +46,7 @@ This package contains the header files and libraries needed for
 developing programs using the %{name} library.
 
 %prep
-%setup -qn %{name}-%{filever}
+%setup -qn %{oname}-%{version}
 %autopatch -p1
 
 %build
