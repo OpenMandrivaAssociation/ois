@@ -1,4 +1,4 @@
-%define major %{version}
+%define major 1.5
 %define filever %(echo v%{version}| tr . -)
 %define libname %mklibname OIS %{major}
 %define develname %mklibname OIS -d
@@ -13,8 +13,6 @@ License:	zlib
 Group:		System/Libraries
 Url:		http://sourceforge.net/projects/wgois/
 Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
-#Patch0:		ois-gcc47.patch
-#Patch1:		ois-automake-1.13.patch
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
 
@@ -57,10 +55,9 @@ developing programs using the %{name} library.
 %make_install -C build
 
 %files -n %{libname}
-#{_libdir}/libOIS-%{major}*.so
+%{_libdir}/libOIS-%{major}*.so
 
 %files -n %{develname}
 %{_includedir}/ois
 %{_libdir}/libOIS.so
 %{_libdir}/pkgconfig/OIS.pc
-
