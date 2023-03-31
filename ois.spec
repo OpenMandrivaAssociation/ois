@@ -8,7 +8,7 @@
 Summary:	Object Oriented Input System
 Name:		ois
 Version:	1.5.1
-Release:	1
+Release:	2
 License:	zlib
 Group:		System/Libraries
 Url:		http://sourceforge.net/projects/wgois/
