@@ -11,7 +11,7 @@ Version:	1.5.1
 Release:	2
 License:	zlib
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/wgois/
+Url:		https://sourceforge.net/projects/wgois/
 Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
