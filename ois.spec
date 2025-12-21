@@ -13,6 +13,7 @@ License:	zlib
 Group:		System/Libraries
 Url:		https://sourceforge.net/projects/wgois/
 Source0:	https://github.com/wgois/OIS/archive/refs/tags/v%{version}/%{oname}-%{version}.tar.gz
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
 
