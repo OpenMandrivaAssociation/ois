@@ -7,8 +7,8 @@
 
 Summary:	Object Oriented Input System
 Name:		ois
-Version:	1.5.1
-Release:	2
+Version:	1.6.0
+Release:	1
 License:	zlib
 Group:		System/Libraries
 Url:		https://sourceforge.net/projects/wgois/
@@ -45,7 +45,7 @@ This package contains the header files and libraries needed for
 developing programs using the %{name} library.
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -qn %{oname}-%{version} -n OIS-1.6.0
 %autopatch -p1
 
 %build
